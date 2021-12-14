@@ -1,0 +1,63 @@
+### EEPROM Plan ###
+
+ v2.0
+ 9.12.2021
+
+ 1K Bytes EEPROM auf dem ATmega328P
+
+    byte        = 1 Byte
+    bool        = 1 Byte
+    pointer     = 2 Bytes
+    short       = 2 Bytes
+    int         = 4 Bytes
+    long        = 4 Bytes
+    long long   = 8 Bytes
+
+ Chaser:
+
+    byte Chaser1[20][8]  = (8 * 1 Byte) * 20 = 160 Bytes
+    byte Chaser2[20][8]  = (8 * 1 Byte) * 20 = 160 Bytes
+    byte Chaser3[20][8]  = (8 * 1 Byte) * 20 = 160 Bytes
+    ------------------------------------------------------
+                                             = 480 Bytes
+
+    1000 Bytes - 480 Bytes = 520 Bytes
+
+    520 Bytes übrig
+
+
+ Systemeinstellungen:
+
+    byte status[4] = 4 * 1 Byte = 4 Bytes
+    byte statusebene            = 1 Byte
+    -------------------------------------
+                                = 5 Bytes
+
+    520 Bytes - 5 Bytes = 515 Bytes
+
+    515 Bytes übrig
+
+
+ Belegung/Adressen:
+
+    Variable           Platzbedarf  Adresse
+
+    Chaser1[0][0]  --> 160 Bytes:   0
+    Chaser2[0][0]  --> 160 Bytes:   200
+    Chaser3[0][0]  --> 160 Bytes:   400
+    status[0]      -->   4 Bytes:   600
+    statusebene    -->   1 Byte :   610
+
+
+
+### How2 ###
+ Nutzung (Arduino/C++):
+
+    EEPROM.write(address, byteValue);
+    EEPROM.read(address);
+
+    EEPROM.update(address, byteValue);
+
+    EEPROM.put(address, Data);  // Nutzt update; kann verschiedene Datentypen schreiben
+    EEPROM.get(address, Data);  //
+

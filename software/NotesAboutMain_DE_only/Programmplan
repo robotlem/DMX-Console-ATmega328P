@@ -1,0 +1,31 @@
+Programmplan für DMX-Console v2.0
+
+    Programmversion     : 2.0
+    Hardwareversion     : 1.0
+    Autor               : S.Pauthner
+    Erstelldatum        : 9.12.2021
+    Lizenz              : GNU GPL v3
+
+
+
+Status/Aktivität:
+
+    * Variablen:
+    *   - statusebene
+    *   - status[4]
+
+    Ebene 0 Ebene 1                 Ebene 2                 Ebene 3
+            status[0]               status[1]               status[2]
+
+    MENU    - Manuell
+            - Scene hinzufügen      - Chaser auswahl        - Scene auswahl
+            - Scene löschen         - Chaser auswahl        - Scene auswahl
+            - Scene abrufen         - Chaser auswahl        - Scene auswahl
+            - Chaser abrufen        - Chaser auswahl
+            - Einstellungen         ~ Chaser auswahl        ~ Scene auswahl
+
+
+EEPROM:
+
+    siehe EEPROM_plan_V2
+
