@@ -41,3 +41,7 @@ Upload the prepare program (which updates the EEPROM to right start values).
 Upload the main program.
 
 Now you can build the components in a fitting case (you find an example in the hardware folder).
+
+## Bugs
+
+There could be some bugs left...
