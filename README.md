@@ -34,7 +34,7 @@ This project stands under the GNU GPLv3 License - see the LICENSE.md file for de
 
 The circuit and BOM is in the hardware folder.
 Build the "mainboard" on a perfboard and connect the faders, the LCD, ... with it.
-You can also add a linear voltage regulator to use it with higher voltage.
+You can also add a voltage regulator to use it with higher voltage.
 
 To flash the software, connect the console (through a programmer) to your computer (if you are using a new ATmega328P you should burn a fitting bootloader first to set the fuses right).
 Upload the prepare program (which updates the EEPROM to right start values).
