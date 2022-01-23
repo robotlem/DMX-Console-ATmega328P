@@ -45,3 +45,4 @@ Now you can build the components in a fitting case (you find an example in the h
 ## Bugs
 
 There could be some bugs left...
+  - the fade time on the LCD is wrong
